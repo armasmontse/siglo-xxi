@@ -1,0 +1,103 @@
+%title {
+	@extend %paragraph;
+}
+
+/* Call to action */
+%title-cta, .title-cta {
+	@extend %title;
+	font-size: 36px !important;
+	line-height: 43px;
+}
+
+/* Parallax */
+%title-parallax, .title-parallax {
+	@extend %title;
+	font-size: 20px;
+	text-transform: uppercase;
+	line-height: 24px;
+}
+
+/* Título general */
+%title-general, .title-general {
+	@extend %title;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+// Título Contacto
+%title-contacto, .title-contacto {
+	@extend %paragraph;
+	font-size: 35px !important;
+	line-height: 40px;
+	color: c(white) !important;
+
+	@include between(xs-big,sm-big) {
+		font-size: 28px !important;
+		line-height: 34px !important;
+	}
+	
+	@include under(xs-big) {
+		font-size: 21px !important;
+		line-height: 27px !important;
+	}
+}
+
+
+// Título Grande
+%title-grande, .title-grande {
+	@extend %title;
+	font-size: 50px !important;
+	line-height: 55px !important;
+	text-transform: uppercase !important;
+	font-weight: bold;
+
+	@include between(xs-big,sm-big) {
+		font-size: 40px !important;
+		line-height: 48px !important;
+	}
+	
+	@include under(xs-big) {
+		font-size: 26px !important;
+		line-height: 35px !important;
+	}
+}
+
+// Niveles Educativos
+%subtitle-niveles, .subtitle-niveles {
+    @extend %paragraph-list;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+// Splash
+%title-splash, .title-splash {
+	@extend %title;
+	font-size: 80px !important;
+	text-transform: uppercase;
+	color: white !important; 
+	text-align: center;
+	font-weight: bold;
+
+	@include between(xs-big,sm-big) {
+		font-size: 40px !important;
+	}
+	
+	@include under(xs-big) {
+		font-size: 26px !important;
+	}
+}
+
+%subtitle-splash, .subtitle-splash {
+	@extend %title-splash;
+	font-size: 30px !important;
+
+	@include between(xs-big,sm-big) {
+		font-size: 26px !important;
+	}
+	
+	@include under(xs-big) {
+		font-size: 18px !important;
+	}
+}

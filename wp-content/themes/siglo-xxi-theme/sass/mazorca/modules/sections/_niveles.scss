@@ -1,0 +1,209 @@
+.niveles {
+	$col-1: 100%/12;
+	&__parallax {
+		&-desktop {
+		    height: 323px;
+			margin-top: 47px !important;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			background: url(../images/parallax-niveles-aldoble.png) no-repeat fixed 50% 0;
+			background-size: cover;
+			@include under(xs-big) {
+				display: none;
+				// height: 150px;
+				// margin-top: 50px !important;
+				// background-position: 40%;
+			}
+		}
+		// Parallax 2
+		&-mobil {
+			display: none;
+			// min-height: 320px;
+			// background: transparent;
+			@include under(xs-big) {
+				min-height: 250px;
+				background: transparent;
+				display: block;
+			}
+		}
+	}
+	&__content {
+		margin-bottom: 215px;
+		
+		@include between(xs-big,sm-big) {
+			margin-bottom: 120px;
+		}
+
+		@include under(xs-big) {
+			margin-bottom: 30px;
+		}
+
+	}
+	&__background {
+		&-orange {
+			background-color: c(bg_sec_orange);
+			width: 100%;
+			height: auto;
+
+		}
+	}
+	&__etapa {
+	    margin-bottom: 60px;
+	    margin-top: 70px;
+
+	    @include under(xs-big) {
+			margin: 50px 0;
+		}	
+	}
+	&__edad {
+		@extend %title-grande;	
+		color: c(white);
+	    margin-bottom: 20px;
+	}
+	&__descripcion {
+		@extend %title-contacto;
+		font-weight: bold;
+	}
+	&__inicial {
+	    padding-top: 70px;
+		
+		@include under(xs-big) {
+			padding-top: 50px;
+		}
+
+		&-title {
+			@extend %paragraph-title;
+			text-transform: uppercase;
+			margin-bottom: 15px;
+			font-weight: bold;
+				
+			@include under(xs-big) {
+				margin-bottom: 35px;
+			}
+
+			&-lactantes {
+				@extend %subtitle-niveles;
+				margin-bottom: 15px;
+				font-weight: bold;
+				
+				@include under(xs-big) {
+					margin-bottom: 20px;
+				}
+			}
+
+		}
+		&-sbtitle{
+			@extend %paragraph-text;
+		}
+		&-text {
+			@extend %paragraph-list;
+		}
+		&-programa {
+			display: flex;
+			overflow: hidden;
+			@include under(xs-big) {
+				display: block;
+			}
+		}
+		&-areas {
+			width: calc(#{$col-1} * 4); 
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			margin-right: calc(#{$col-1} * 2);
+			
+			@include under(xs-big) {
+				width: 100%;
+			}
+
+			&--list {
+				@extend %paragraph-list;
+			    display: flex;
+				&:before {
+					content: "-"; 
+					padding-right: 8px;
+					color: c(text-blue);
+				}
+			}
+			
+		}
+		&-materias {
+			width: calc(#{$col-1} * 3.5);
+			padding: 0;
+			margin: 0;
+			// margin-top: 65px;
+			padding-top: 65px;
+			margin-right: calc(#{$col-1} * 0.5);
+			overflow: hidden;
+			@include under(xs-big) {
+				width: 100%;
+				margin-top: 35px;
+			}
+
+			&--list {
+				@extend %paragraph-text;
+				font-weight: bold;
+				color: c(text_green);
+				text-transform: uppercase;
+				display: flex;
+				&:before {
+					content: "•";
+					margin-right: 10px;
+				}
+			}
+			
+		}
+
+		&-icon {
+			width: calc(8.33333% * 2);
+			height: 150px;
+		    display: flex;
+		    flex-direction: column-reverse;
+			overflow: hidden;
+			@include under(xs-big) {
+				width: 100%;
+				margin: 20px 0 0;
+			}
+			&--compu {
+				height: 280px;
+				    flex-direction: column;
+			}
+
+			&--image{
+				width: 137px;
+				margin-right: 12px;
+				// float: right;
+
+				@include under(xs-big) {
+					display: block;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+
+
+	&__boximg {
+
+		&-mt {
+			@include between(xs-big,sm-big) {
+				margin-top: 70px;
+			}
+			@include under(xs-big) {
+				display: none !important;
+			}
+		}
+	}
+
+	&__colmd {
+		@include under(sm-big) {
+			width: 100%;
+		}
+	}
+}
+
+// .slideInUp {
+// 	visibility:hidden;
+// 	  transition:opacity 0.5s linear;
+// }

@@ -1,0 +1,234 @@
+.filosofia {
+	$col-1: 100%/12;
+	&__parallax {
+		&-desktop {
+		    height: 323px;
+			margin-top: 47px !important;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			background: url(../images/filosofia/parallax-filosofia-aldoble.png) no-repeat fixed 50% 0;
+			background-size: cover;
+			@include under(xs-big) {
+				display: none;
+				// height: 150px;
+				// margin-top: 50px !important;
+				// background-position: 40%;
+			}
+		}
+		// Parallax 2
+		&-mobil {
+			display: none;
+			// min-height: 320px;
+			// background: transparent;
+			@include under(xs-big) {
+				min-height: 250px;
+				background: transparent;
+				display: block;
+			}
+		}
+	}
+	&__content {
+		margin-bottom: 140px;
+		margin-top: 70px;
+
+		@include between(xs-big,sm-big) {
+			margin-bottom: 70px;
+		}
+
+		@include under(xs-big) {
+			margin-bottom: 50px;
+		}
+		
+	}
+	&__background {
+		&-orange {
+			background-color: c(bg_sec_mellow);
+			width: 100%;
+			height: auto;
+			margin-top: -2px;
+		}
+		&-blue {
+			background-color: c(bg_blue_light);
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__etapa {
+	    margin-bottom: 60px;
+	    margin-top: 70px;
+	    @include under(xs-big) {
+			margin-bottom: 45px;
+	    	margin-top: 50px;
+		}
+	}
+	&__edad {
+		@extend %title-grande;	
+		color: c(white);
+		margin-bottom: 20px;
+	}
+	&__descripcion {
+		@extend %title-contacto;
+		font-weight: bold;
+	}
+	&__sigloxxi{
+		margin-bottom: 100px;
+		
+		@include between(xs-big,sm-big) {
+			margin-bottom: 70px;
+		}
+
+		@include under(xs-big) {
+			margin-bottom: 20px;
+		}
+	}
+	&__figure {
+		@include under(xs-big) {
+			width: 230px;
+		    margin: 0 auto !important;
+		    display: block !important;
+		    padding-bottom: 20px;
+		}
+
+		
+		&-circular {
+			position: absolute;
+			width: 250px;
+			height: auto;
+			top: 10%;
+			left: -4%;
+			z-index: -1;
+			overflow: hidden;
+			@include between(xs-big,sm-big) {
+				left: -12%;
+				top: 14%;
+			}
+
+			@include under(xs-big) {
+				display: none;
+			}
+		}
+		&-hexagonal {
+			position: absolute;
+			width: 250px;
+			height: auto;
+			bottom: -23%;
+			left: -4%;
+
+			@include between(xs-big,sm-big) {
+				bottom: 4%;
+			}
+
+			@include under(xs-big) {
+				position: inherit;
+			}
+
+			&-box {
+
+				@include between(xs-big,sm-big) {
+					width: calc(#{$col-1} * 4); 
+				}
+
+				@include under(xs-big) {
+					width: 100%;
+				}
+			}
+
+		}
+	}
+	&__modelo-educativo {
+		&--title {
+			@extend %paragraph-list;
+			text-transform: uppercase;
+		    margin-bottom: 15px;
+		    font-weight: bold;
+		    &:nth-of-type(even) {
+		    	padding-top: 60px;
+		    	@include under(xs-big) {
+					padding-top: 35px;
+				}
+		    }
+		}
+		&-box {
+			@include between(xs-big,sm-big) {
+				width: calc(#{$col-1} * 8);	
+			}
+		}
+	}
+	&__title{
+		@extend %paragraph-title;
+		font-weight: bold;
+		text-transform: uppercase;
+	    margin-bottom: 15px;
+	}
+	&__sbtitle{
+		@extend %paragraph-text;
+		&:nth-of-type(even) {
+			margin-top: 30px;
+		}
+	}
+	&__text{
+		@extend %paragraph-list;
+	}
+	&__vision {
+		padding-top: 77px;
+			overflow: hidden;
+		@include under(sm-big) {
+			padding-top: 50px;
+		}
+
+		&-sbtitle {
+			@extend %paragraph-vision;
+			color: c(bg_sec_mellow);
+		}
+
+		&-box {
+			@include between(xs-big,sm-big) {
+				width: calc(#{$col-1} * 8);
+				margin-left: calc(8.3% * 4) !important;
+			}
+
+			@include under(xs-big) {
+
+			}
+		}
+	}
+	&__slider {
+		overflow: hidden;
+	    margin-bottom: 10px;
+	    position: relative;
+    	z-index: 3;
+	    .swiper-wrapper {
+			transition-duration: 2.5s !important;
+		}
+	}
+	&__contBarquito {
+		padding-bottom: 90px;
+    	padding-top: 100px;
+		
+		@include between(xs-big,sm-big) {
+			padding-bottom: 70px;
+			padding-top: 70px;
+		}
+
+		@include under(xs-big) {
+			padding-top: 50px;
+		}
+	}
+	&__barquito {
+	height: 140px;
+	overflow: hidden !important;
+		&-image{
+			position: absolute;
+			width: 380px;
+			height: auto;
+			top: 42%;
+			right: -10%;
+
+			@include under(xs-big) {
+				position: inherit;
+			    margin: 20px auto 0;
+			}
+		}
+	}
+}

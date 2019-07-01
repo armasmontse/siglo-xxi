@@ -1,0 +1,26 @@
+///
+///A Map containing the breakpoints used for the project, as weel as for generating the grid classes. The responsive mixins (respond-to, biggerThan and smallerThan) accept either the map keys, strings and variables, so there is no need to reference the map keys in any special way.
+///
+///Example of their use in a mixin:
+///		@include smallerThan(medio) {
+///		   //Your code
+///		}
+///
+///@type {map}
+
+$breaks: (
+	super-xs: 420px,
+	xs: 480px,
+	xs-big: 619px,
+	sm: 768px,
+	sm-big: 873px,
+	md: 1024px,
+	md-big: 1100px,
+	lg: $container-max-width,
+	lg-big: 1400px,
+);
+
+@function b($break) {
+	@return map-get($breaks, $break);
+
+}

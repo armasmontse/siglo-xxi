@@ -1,0 +1,38 @@
+.slideInUp {
+	@include under(sm) {
+	    animation-name: fadeInRight !important;
+	}
+
+}
+.slideInUp {
+	@include under(sm) {
+	    animation-name: fadeInRight !important;
+	}
+}
+
+.filosofia__etapa.fadeInRight, .niveles__etapa.fadeInRight, .servicios__frase.fadeInRight {
+	@include under(sm) {
+	    animation-name: none !important;
+	}
+}
+.filosofia__figure {
+	.fadeInRight {
+		@include over(sm) {
+		    animation-name: none !important;
+		}
+		@include under(sm) {
+    		animation-name: fadeInRight;
+		}	
+	}
+}
+
+
+.niveles__etapa.slideInUp {
+	animation-name: slideInUp;
+	// opacity: 0.5;
+
+
+}
+.clearfix {
+	    clear: both;
+}

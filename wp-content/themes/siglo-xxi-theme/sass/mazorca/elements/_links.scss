@@ -1,0 +1,17 @@
+%link {
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover,
+	&:active,
+	.selected {
+	}
+}
+
+%link-contacto, .link-contacto {
+	text-decoration: underline;
+	&:hover {
+		color: c(text_orange);
+	}
+}
+

@@ -1,0 +1,242 @@
+.servicios {
+	$col-1: 100%/12;
+	&__parallax {
+		&-desktop {
+		    height: 323px;
+			margin-top: 47px !important;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			background: url(../images/servicios/parallax-servicios-aldoble.png) no-repeat fixed 50% 0;
+			background-size: cover;
+			@include under(xs-big) {
+				display: none;
+				// height: 150px;
+				// margin-top: 50px !important;
+				// background-position: 40%;
+			}
+		}
+		// Parallax 2
+		&-mobil {
+			display: none;
+			// min-height: 320px;
+			// background: transparent;
+			@include under(xs-big) {
+				min-height: 250px;
+				background: transparent;
+				display: block;
+			}
+		}
+	}
+	&__content {
+		padding-bottom: 140px;
+		// margin-top: 70px;
+		overflow: hidden;
+		@include between(xs-big,sm-big) {
+			margin-bottom: 70px;
+		}
+
+		@include under(sm-big) {
+			overflow: hidden;
+			margin-bottom: 50px;
+		}
+		#beneficios, #servicios {
+			padding-top: 70px;
+		}
+	}
+	&__background {
+		&-green {
+			background-color: c(bg_sec_green);
+			width: 100%;
+			height: auto;
+			margin-top: -2px;
+		}
+	}
+	&__frase {
+    margin-bottom: 60px;
+    margin-top: 70px;
+	
+	@include under(xs-big) {
+		margin: 50px 0;
+	}
+
+	    &-title {
+			@extend %title-grande;	
+			color: c(white);
+			margin-bottom: 20px;
+		}
+		&-sbtitle {
+			@extend %title-contacto;
+			font-weight: bold;
+		}
+	}
+	
+	&__beneficios {
+		margin-right: calc(#{$col-1} * 4); 
+		margin-bottom: 85px;
+overflow: hidden;
+		@include between(xs-big,sm-big) {
+			margin: 0 0 70px;
+		}
+
+		@include under(xs-big) {
+			margin: 0px;
+		}
+
+		&-title {
+			@extend %paragraph-title;
+			text-transform: uppercase;
+		    margin-bottom: 15px;
+		    font-weight: bold;
+		}
+		&-sbtitle{
+			@extend %paragraph-text;
+		}
+		&-text {
+			@extend %paragraph-list;
+		}
+	}
+	&__list {
+		margin-right: calc(#{$col-1} * 4);
+	    margin-left: 16px;
+
+	    @include between(xs-big,sm-big) {
+			width: calc(#{$col-1} * 8);
+			margin-left: calc(#{$col-1} * 4);
+		}
+
+		@include under(xs-big) {
+			margin: 0;
+		}
+
+		&-beneficios {
+			list-style-type: disc;
+			padding: 0;
+			margin: 0;
+			@extend %paragraph-text;
+			color:c(text_orange);
+			text-transform: uppercase;
+			font-weight: bold;
+			span {
+				display: block;
+				text-transform: initial;
+				font-weight: normal;
+				margin-bottom: 20px;
+			    margin-left: 0px;
+			}
+		}
+	}
+	&__image-izq {
+		width: 478px;
+		position: absolute;
+		top: 32%;
+		left: -14%;
+		z-index: -1;
+
+		@include between(xs-big,sm-big) {
+			left: -22%;
+		}
+		&-none {
+			@include under(xs-big) {
+				display: none;
+			}
+		}
+
+
+		&-mobile {
+			@include under(xs-big) {
+			    width: 100%;
+			}
+		}
+
+		&-top {
+			@include between(xs-big,sm-big) {
+				top: 17%;
+				left: -18%;
+			}
+
+			@include under(xs-big) {
+				display: none;
+			}
+
+			&-show-mobile {
+				@include over(xs-big) {
+					display: none;
+				}
+				@include under(xs-big) {
+					display: block;
+					width: 65%;
+					margin: 20px auto;
+				}
+			}
+
+			&-mobile {
+				@include under(xs-big) {
+					background: red;
+				    position: relative;
+				    width: 100%;
+				}
+			}
+		}
+
+		&-mobile {
+			@include over(xs-big) {
+				display: none;
+			}
+			@include under(xs-big) {
+				display: block;
+				margin: 20px 0;
+			}
+		}
+
+	}
+	&__image-der {
+		&--ninos {
+			width: 337px;
+			height: auto;
+			margin-right: 0px;
+			float: right;
+			margin-top: 25px;
+			
+			@include between(xs-big,sm-big) {
+				margin: 70px 0;
+			}
+				
+			@include under(xs-big) {
+				width: 65%;
+				margin: 20px auto 50px auto;
+			}
+
+		}
+		&--nube {
+			width: 337px;
+			height: auto;
+			position: absolute;
+			right: 0px;
+			bottom: -45px;
+
+			@include between(xs-big,sm-big) {
+				position: relative;
+				right: -65%;
+			}
+
+			@include under(xs-big) {
+				position: relative;
+				width: 75%;
+				bottom: 0;
+				margin: 20px 0;
+			}
+		}
+	}
+
+	&-100 {
+		@include under(xs-big) {
+			width: 100%;
+		}
+		
+	}
+}
+
+.grid__container.beneficios{
+	overflow: hidden;
+}

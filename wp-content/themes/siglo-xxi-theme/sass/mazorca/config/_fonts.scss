@@ -1,0 +1,19 @@
+//_________________________ Config:Fuentes _________________________ \\
+
+/**
+ * Declare fonts using the Mixin
+ */
+@include declara-font-face(Avenir, '../fonts/AvenirLTStd-Heavy', bold);
+@include declara-font-face(Avenir, '../fonts/AvenirLTStd-Roman', normal);
+
+/// Refer to font families through mapped variables.
+/// Font families must be written as lists, that is, between parenthesis.
+///
+///
+$fonts:(
+	sans:	('Avenir', sans-serif),
+);
+
+@function f($font) {
+	@return map-get($fonts, $font);
+}

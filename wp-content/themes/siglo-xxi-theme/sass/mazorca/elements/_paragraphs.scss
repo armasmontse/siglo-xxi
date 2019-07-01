@@ -1,0 +1,111 @@
+%paragraph {
+    font-family: f(sans);
+    font-size: 16px;
+    color: c(text_blue);
+}
+%paragraph-title{
+	@extend %paragraph;
+    font-size: 20px;
+    line-height: 24px;
+}
+%paragraph-list, .paragraph-list{
+	@extend %paragraph;
+    font-size: 17px;
+    line-height: 27px;
+}
+
+// Modal
+%modal-date, .modal-date {
+    @extend %paragraph;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+%modal-text, .modal-text {
+    @extend %paragraph;
+}
+
+%modal-close, .modal-close {
+    @extend %modal-date;
+    line-height: 23px;
+    color: c(text_orange);
+    cursor: pointer;
+}
+
+/* HOME */
+%paragraph-text, .paragraph-text{
+	@extend %paragraph;
+    font-size: 18px;
+    line-height: 28px;
+}
+%paragraph-list, .paragraph-list{
+	@extend %paragraph;
+    font-size: 17px;
+    line-height: 27px;
+}
+%paragraph-button-txt{
+	@extend %paragraph;
+    font-size: 16px;
+    line-height: 21px;
+    color: c(white);
+}
+
+%paragraph-form{
+	@extend %paragraph;
+    font-size: 32px;
+    line-height: 43px;
+    @include under(xs-big) {
+    	font-size: 18px;
+    	line-height: 24px;
+    }
+}
+
+%paragraph-cita, .paragraph-cita{
+	@extend %paragraph;
+    font-size: 28px;
+    line-height: 40px;
+    @include under(xs-big) {
+    	font-size: 18px;
+    	line-height: 28px;
+    }
+}
+
+%paragraph-vision, .paragraph-vision{
+	@extend %paragraph;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+%paragraph-autor, .paragraph-autor {
+	@extend %paragraph;
+    font-size: 18px;
+    line-height: 28px;
+}
+%paragraph-date, .paragraph-date {
+	@extend %paragraph;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+// General
+%paragraph-general, .paragraph-general {
+    @extend %paragraph-autor;
+}
+
+// Parallax
+%paragraph-parallax, .paragraph-parallax {
+    @extend %paragraph;
+}
+
+%paragraph-list-parallax, .paragraph-list-parallax {
+    @extend %paragraph;
+    color: c(text_green);
+    list-style-type: disc;
+    text-transform: uppercase;
+    margin-left: 15px;
+    line-height: 24px;
+    font-weight: bold;
+    &:hover {
+        color: c(text_blue);
+    }
+}

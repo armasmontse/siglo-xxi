@@ -1,0 +1,58 @@
+%label {
+	font-family: f(sans);
+    font-size: 16px;
+    color: c(text_blue);
+}
+
+
+/* Menú */
+%label-menu, .label-menu {
+	@extend %label;
+	font-size: 13px;
+	text-transform: uppercase;
+	color: c(text_orange);
+	cursor: pointer;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	&:hover,
+	&:active{
+		color: c(text_blue);
+		background-color: c(bg_yellow);
+	}
+}
+
+%label-submenu, .label-submenu {
+	@extend %label-menu;
+	color: c(text_blue);
+	&:hover,
+	&active{
+		color: c(text_orange);
+		background-color: c(white);
+	}
+}
+
+
+/* Form */
+%label-form, .label-form {
+	@extend %label;
+	font-weight: bold;
+	font-size: 15px;
+	text-transform: uppercase;
+	color: c(text_blue);
+	margin-top: 13px;
+    margin-right: 10px;
+}
+
+
+/* Footer */
+%footer-contacto, .footer-contacto {
+    @extend %label;
+  	line-height: 21px;
+}
+
+%footer-instituciones, .footer-instituciones {
+    @extend %label;
+    font-size: 12px;
+  	line-height: 16px;
+}

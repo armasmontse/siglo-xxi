@@ -1,0 +1,30 @@
+$colors: (
+	base:	#312822,
+	white:	#FFFFFF,
+	// Textos
+	text_blue: #477388,
+	text_orange: #F49957,
+	text_green: #D6C335, 
+
+	// Background
+	bg_orange: #FFBE77,
+	bg_yellow: #F7EA91,
+	bg_green: #B1E3C0,
+	bg_blue_light: #BFE3ED,
+	bg_blue: #439FBB,
+
+	// Background Secundarios
+	bg_sec_orange: #F26F4F,
+	bg_sec_green: #67BFAF,
+	bg_sec_mellow: #FFA47A,
+	);
+
+@function c($color:base) {
+	@return map-get($colors, $color);
+}
+
+//no borrar
+$colorForeground: c();
+$colorBackground: c(white);
+$colorFeatured: c(base);
+$colorError: #8A1010;

@@ -1,0 +1,236 @@
+.contacto {
+	$col-1: 100%/12;
+
+	// Intro
+	&__intro {
+		&-boximg {
+			position: absolute;
+		    right: 30px;
+		    width: calc(8.3% * 3);
+		    @include between(xs-big,sm-big) {
+				top: 70px;	
+			}
+
+			@include under(xs-big) {
+				width: calc(8.3% * 4);
+				margin: 15% 29%;
+			}
+
+			@include under(xs) {
+				width: calc(8.3% * 6);
+    			margin: 100px 17%;
+			}
+
+			@include under(super-xs) {
+    			margin: 100px 18%;
+			}
+
+		}
+		&-img {
+
+		}
+	}
+
+	&__background {
+
+		&-blue {
+			background-color: c(bg_blue);
+			width: 100%;
+			height: auto;
+			padding: 120px 0 130px;
+
+			@include under(xs-big) {
+				padding-top: 70px;
+			}
+		}
+
+		&-yellow {
+			background-color: c(bg_yellow);
+			padding: 70px 0 70px;
+
+			@include under(xs-big) {
+				padding: 160px 0 50px;
+            }
+            
+            
+            .grid__container {
+                .grid__container {
+                    padding: 0;
+                    
+                }
+            }
+		}
+
+		&-white {
+			padding: 70px 0 145px;
+			@include between(xs-big,sm-big) {
+				padding: 70px 0 50px;	
+			}
+
+			@include under(xs-big) {
+				padding: 50px 0;	
+			}
+		}
+	}
+
+	&__frase {
+
+		&-ttl {
+
+		}
+	}
+
+	 // Instalaciones
+	&__instalaciones {
+			
+	 	&-intro {
+			h1, h2, h3, h4, h5, h6 {
+	 			@extend %title-parallax;
+				margin-bottom: 25px;
+				font-weight: bold;
+		 	}
+	 	}
+
+	 	&-ttl, h1, h2, h3, h4, h5, h6 {
+	 		@extend %title-parallax;
+			margin-bottom: 25px;
+	 	}
+
+	 	&-content, p {
+	 		@extend %paragraph-text;
+	 	}
+		
+	}
+
+	&-redes {
+		display: flex;
+    	margin-top: 70px;
+    	a {
+    		margin-left: 25px;
+    	}
+    	img {
+			width: 35px;
+			height: 35px;
+    	}
+	}
+
+	// Dirección
+	&__direccion {
+
+		&-flex {
+			display: flex;
+    		align-items: center;
+    		margin-bottom: 5px;
+    		a {
+				display: block;
+				width: 100%;
+				overflow: hidden;
+				white-space: initial;
+				text-overflow: ellipsis;
+				text-align: left;
+    		}
+		}
+
+		&-ttl {
+			margin-top: 70px !important;
+			margin-bottom: 15px !important;
+			font-weight: bold;
+			@include under(xs-big) {
+				margin-top: 50px !important;
+				margin-bottom: 10px !important;		
+			}
+		}
+
+		&-icono {
+			width: 20px;
+			margin-right: 10px;
+		}
+
+		&-escuela {
+			margin-top: 70px;
+		}
+	}
+
+	// Requisitos
+	&__requisitos {
+
+		&-box {
+			margin-bottom: 40px;
+		}
+
+		&-ttl {
+			margin-bottom: 25px;
+			font-weight: bold;
+			@include under(xs-big) {
+				margin-bottom: 15px !important;		
+			}
+
+		}
+
+		&-elemento {
+			margin-bottom: 5px;
+			display: flex;
+
+			&::before {
+				content: "-";
+				margin-right: 10px;
+			}
+		}
+
+	}
+
+	// Documentos
+	&__documentos {
+		
+		&-ttl {
+			margin-bottom: 25px;
+			font-weight: bold;
+			@include under(xs-big) {
+				margin-bottom: 15px !important;		
+			}
+		}
+
+		&-elemento {
+			margin-bottom: 5px;
+			display: flex;
+
+			&::before {
+				content: "-";
+				margin-right: 10px;
+			}
+		}
+
+    }
+    
+    &__form {
+        padding: 0;
+        padding-bottom: 100px;
+        .grid__col-1-9 {
+            padding-left: 0;
+        }
+        .home__newsletter-form--name,
+        .home__newsletter-form #home_form_JS_phone {
+            background-color: #F7EA91;
+        }
+        .home__newsletter-form--button,
+        .button-orange,
+        .button-white {
+                background-color: #007597;
+                &:hover {
+                    background-color: #fff;
+                    color: #007597;
+                }
+        }
+    }
+
+    &__title {
+
+    }
+
+    &__sbtitle {
+        width: 100%;
+        max-width: 568px;
+    }
+
+}
+

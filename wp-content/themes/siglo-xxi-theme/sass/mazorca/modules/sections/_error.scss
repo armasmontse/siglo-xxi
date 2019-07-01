@@ -1,0 +1,42 @@
+.error404 {
+	$col-1: 100%/12;
+
+	&__box{
+		padding: 130px 0 130px;
+
+		@include under(sm-big) {
+			padding: 100px 0 100px;
+		    display: block;
+		    margin: 0 auto !important;
+		}
+
+	}
+	
+	&__img {
+		width: calc(#{$col-1} * 10);
+		margin-bottom: 85px;
+	}
+
+	&__ttl {
+		color: c(text_blue) !important;
+		@extend %paragraph;
+		font-size: 50px !important;
+		line-height: 55px;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+
+		@include under(xs-big) {
+			font-size: 40px !important;
+			line-height: 44px;
+		}
+	}
+
+	&__subttl {
+		color: c(text_blue) !important;
+
+		@include under(xs-big) {
+			font-size: 20px !important;
+			line-height: 23px;
+		}
+	}
+}
