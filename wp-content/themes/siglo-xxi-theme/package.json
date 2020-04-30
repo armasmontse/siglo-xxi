@@ -43,7 +43,7 @@
   "homepage": "https://github.com/el-cultivo/cltvo-blank-wptheme#readme",
   "dependencies": {
     "animate.css": "^3.5.2",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "ramda": "^0.24.1",
     "tap-logger": "1.0.0"
   }
